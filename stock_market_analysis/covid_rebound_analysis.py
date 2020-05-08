@@ -30,9 +30,9 @@ sp500_close_data = pd.DataFrame()
 
 # loop through the csv file and create a stock object for each
 for ticker in df['Symbol'].values[0:2]: 
+    
     stock_obj = sd(ticker)
     sp500_stock_objs[ticker]=stock_obj
-    print(stock_obj.daily_close)
     
     # create a new column that is the ticker
     stock_obj.daily_close['Symbol'] = ticker
@@ -40,12 +40,40 @@ for ticker in df['Symbol'].values[0:2]:
     # limit the range to the last one hundred days
     end_date = pd.Timestamp.today()
     begin_date = end_date - np.timedelta64(100,'D')    
-    stock_obj.daily_close = stock_obj.daily_close.iloc[stock_obj.daily_close.index.get_loc(begin_date,method='nearest'):stock_obj.daily_close.index.get_loc(end_date,method='nearest')]
     
-    print(stock_obj.balance_sheet.columns)    
+    # create a new property that combines close data for the last 100 days with the balance sheet data
+    stock_obj.close_balance = stock_obj.daily_close.iloc[stock_obj.daily_close.index.get_loc(begin_date,method='nearest'):stock_obj.daily_close.index.get_loc(end_date,method='nearest')]
+    
+    # create a placeholder for cash and cash equiv
+    stock_obj.close_balance['cash_and_cash_equiv'] = np.nan
+    
+    # create a placeholder for payables
+    stock_obj.close_balance['payables'] = np.nan
+    
+    for index, row in stock_obj.close_balance.iterrows():
+        
+        # populate cash and cash equivs
+        cace = float(stock_obj.balance_sheet.iloc[stock_obj.balance_sheet.index.get_loc(begin_date,method='nearest')]['Cash and cash equivalents'])
+        while cace == 0.0:
+            begin_date = begin_date - np.timedelta64(30,'D')
+            cace = float(stock_obj.balance_sheet.iloc[stock_obj.balance_sheet.index.get_loc(begin_date,method='nearest')]['Cash and cash equivalents'])
+        stock_obj.close_balance.at[index,'cash_and_cash_equiv'] = cace
+
+        # populate payables
+        payb = float(stock_obj.balance_sheet.iloc[stock_obj.balance_sheet.index.get_loc(begin_date,method='nearest')]['Payables'])
+        while payb == 0.0:
+            begin_date = begin_date - np.timedelta64(30,'D')
+            payb = float(stock_obj.balance_sheet.iloc[stock_obj.balance_sheet.index.get_loc(begin_date,method='nearest')]['Payables'])
+        stock_obj.close_balance.at[index,'payables'] = payb
+    
+    
+    stock_obj.close_balance['cash minus payables'] = stock_obj.close_balance['cash_and_cash_equiv'] - stock_obj.close_balance['payables']
+    print(stock_obj.balance_sheet.columns)
     #print(stock_obj.daily_close)
+    print(stock_obj.close_balance)
+    #print(stock_obj.balance_sheet['Cash and cash equivalents'])
     
-print(sp500_stock_objs)
+#print(sp500_stock_objs)
 
 
 
