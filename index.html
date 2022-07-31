@@ -4,7 +4,7 @@
     <style>
 
         body {
-          background-color:	 #00061a;
+          background-color:	 #00030c;
           color: white;
           font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
         }
@@ -31,7 +31,7 @@
         }
 
         td{
-          width: 250px;
+          width: 400px;
           padding: 4px;
           font-size: 14px;
         }
@@ -44,37 +44,38 @@
 </head>
 <body>
 
-<H1>Korey M. Stafford's Data Science Collection</H1>
-<p>A series of Jupyter notebooks showcasing various past projects, as well as some helpful scripts that I refer back to occasionally.</p>
+<H1>Korey M. Stafford</H1>
+<p>A series of Jupyter notebooks, as well as some helpful scripts that I refer back to occasionally.</p>
 <hr/>
 
 <div id='main-content-div'>
   
-
+    
   
-  <h3>Pandas</h3>
-  <table>
+
+
+  <br/>
+  <h3>S&P 500 - Alphavantage / Yahoo Finance</h3>
+   <table>
+    <tr>
+      <td><a href='sp500_analysis/decision_trees_value_stocks.html'>Using Decision Trees to Identify Value Stocks</a></td>
+      <td>Using Alphavantage and SKLearn can I train a decision tree to correctly classified value stocks as selected by Warren Buffet. More work required.</td>
+    </tr>
       <tr>
-          <td><a href='pandas/read_csv.html'>Read a CSV File</a></td>
-          <td>Create a pandas DataFrame from a CSV file.</td>
+          <td><a href='sp500_analysis/income_statement_analysis.html'>S&P 500 Income Statement Analysis</a></td>
+          <td>Look at income statement data for S&P 500 stocks using alphavantage api.</td>
       </tr>
       <tr>
-        <td><a href='pandas/transpose_df_rename_cols.html'>Transpose and Rename</a></td>
-        <td>Transpose a DataFrame and reset and rename column headers.</td>
-      </tr>
-      <tr>
-        <td><a href='pandas/dataframe_filtering.html'>DataFrame Filtering</a></td>
-        <td>Filter a DataFrame based on single or multiple columns and conditions.</td>
-      </tr>
-      <tr>
-        <td><a href='pandas/handling_bad_data.html'>Handling Bad Data</a></td>
-        <td>Different ways of filling NaN values in DataFrames.</td>
-      </tr>
+        <td><a href='sp500_analysis/sp500_change_analysis.html'>S&P 500 Change Analysis</a></td>
+        <td>Look at correlations between balance sheets and company stock performance over time.</td>
+    </tr>
+    <tr>
+      <td><a href='sp500_analysis/sp500_company_overview_analysis.html'>S&P 500 Company Overview Analysis</a></td>
+      <td>Exploratory analysis of various features avaiable in Alphavantages company overview analysis.</td>
+  </tr>
   </table>
 
   <br/>
-
- 
 
   
   <h3>General Python</h3>
@@ -88,24 +89,23 @@
         <td>An introductory review of classes in Python.</td>
     </tr>
     <tr>
-      <td><a href='general_python/advanced_python.html'>Python Class Basics</a></td>
+      <td><a href='general_python/advanced_python.html'>Advanced Python</a></td>
       <td>An introductory review of classes in Python.</td>
   </tr>
   </table>
 
   <br/>
 
-  <h3>Real Estate Market Analysis</h3>
-  <table>
-    <tr>
-      <th>Col Header 1</th>
-      <th>Col Header 2</th>
-    </tr>
+  
+  <h3>Machine Learning for Predictive Data Analytics - Notes and Worked Examples</h3>
+  <p>By John D Kelleher, Brian Mac Namee, and Aoife D'Arcy <a href="https://machinelearningbook.com/teaching-materials/">(link to the offical website)</a></p>
+  <br/>
+   <table>
       <tr>
-          <td><a href='pandas/read_csv.html'>Read a CSV File</a></td>
-          <td>page two link</td>
+          <td><a href='notes/FMLPDA_chapter_four_information_based_learning_notes.html'>Chapter Four Information Based Learning Notes</a></td>
+          <td>Notes on decision trees and information based learning.</td>
       </tr>
   </table>
-  
+
 
 </div>
