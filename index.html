@@ -4,15 +4,17 @@
     <style>
 
         body {
-          background-color:	 #00030c;
+          background-color:	 #111113de;
           color: white;
-          font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+          letter-spacing: .045rem;
+          font-family: Arial, Helvetica, "Trebuchet MS", Verdana, sans-serif;
         }
         
-        h1 {
-          color:whitesmoke;
+        h1,h2,h3 {
+          color:aliceblue;
           
         }
+        
 
         table{
           border-collapse: collapse;
@@ -33,7 +35,13 @@
         td{
           width: 400px;
           padding: 4px;
-          font-size: 14px;
+          font-size: 18px;
+          color:burlywood;
+          padding:15px;
+        }
+
+        table td:nth-child(2){
+          width: 600px;
         }
 
         #main-content-div{
@@ -49,72 +57,80 @@
 <hr/>
 
 <div id='main-content-div'>
-  
-    
-  
-
 
   <br/>
-  <h3>S&P 500 - Alphavantage / Yahoo Finance</h3>
+
+  <h2>S&P 500 - Alphavantage / Yahoo Finance</h2>
    <table>
     <tr>
-      <td><a href='sp500_analysis/decision_trees_value_stocks.html'>Using Decision Trees to Identify Value Stocks</a></td>
+      <td><a href='sp500_analysis/html_output/decision_trees_value_stocks.html'>Using Decision Trees to Identify Value Stocks</a></td>
       <td>Using Alphavantage and SKLearn can I train a decision tree to correctly classified value stocks as selected by Warren Buffet. More work required.</td>
     </tr>
       <tr>
-          <td><a href='sp500_analysis/income_statement_analysis.html'>S&P 500 Income Statement Analysis</a></td>
+          <td><a href='sp500_analysis/html_output/income_statement_analysis.html'>S&P 500 Income Statement Analysis</a></td>
           <td>Look at income statement data for S&P 500 stocks using alphavantage api.</td>
       </tr>
       <tr>
-        <td><a href='sp500_analysis/sp500_change_analysis.html'>S&P 500 Change Analysis</a></td>
+        <td><a href='sp500_analysis/html_output/sp500_change_analysis.html'>S&P 500 Change Analysis</a></td>
         <td>Look at correlations between balance sheets and company stock performance over time.</td>
     </tr>
     <tr>
-      <td><a href='sp500_analysis/sp500_company_overview_analysis.html'>S&P 500 Company Overview Analysis</a></td>
+      <td><a href='sp500_analysis/html_output/sp500_company_overview_analysis.html'>S&P 500 Company Overview Analysis</a></td>
       <td>Exploratory analysis of various features avaiable in Alphavantages company overview analysis.</td>
   </tr>
   </table>
-
   <br/>
-
-  
-  <h3>General Python</h3>
+  <h2>General Python</h2>
   <table>
+    <tr>
+      <td><a href='general_python/html_output/sets.html'>Sets</a></td>
+      <td>A quick reference guide on sets in Python.</td>
+  </tr>
       <tr>
-          <td><a href='general_python/python_warnings.html'>Warnings in Python</a></td>
+          <td><a href='general_python/html_output/python_warnings.html'>Warnings in Python</a></td>
           <td>A quick reference guide on throwing warnings in Python.</td>
       </tr>
       <tr>
-        <td><a href='general_python/python_class_basics.html'>Python Class Basics</a></td>
+        <td><a href='general_python/html_output/python_class_basics.html'>Python Class Basics</a></td>
         <td>An introductory review of classes in Python.</td>
     </tr>
     <tr>
-      <td><a href='general_python/advanced_python.html'>Advanced Python</a></td>
+      <td><a href='general_python/html_output/precedence_associativity.html'>Precedence and Associativity</a></td>
+      <td>The order in which Python expressions are executed.</td>
+  </tr>
+  <tr>
+    <td><a href='general_python/html_output/operators.html'>Operators</a></td>
+    <td>Examples of various operators in Python.</td>
+</tr>
+    <tr>
+      <td><a href='general_python/html_output/advanced_python.html'>Advanced Python</a></td>
       <td>An introductory review of classes in Python.</td>
   </tr>
   </table>
-
   <br/>
-
-  <h3>General Statistics</h3>
+  <h2>General Statistics</h2>
    <table>
       <tr>
-          <td><a href='stats/student_t_test.html'>Student's t-test</a></td>
-          <td>General overview on Student's t-test.</td>
+          <td><a href='stats/html_output/student_t_test.html'>Student's t-test</a></td>
+          <td>Hypothesis testing technique used to test the mean between two samples, and whether the difference between those two means could have happened by chance. 
+            Should be used where the population is expected to be normally distributed and where the population standard deviation is not known. 
+            It is also intended to work on smaller sample sizes. For more than two samples use ANOVA.</td>
       </tr>
+      <tr>
+        <td><a href='stats/html_output/ANOVA.html'>Analysis of Variance (ANOVA)</a></td>
+        <td>Hypothesis testing technique used to test whether there is a difference between more than two samples. Similar to the Student’s t-test a statistic called the f-statistic is computed and compared against a critical value of that statistic to determine whether a difference exists and how likely the difference has occurred by chance. 
+        </td>
+    </tr>
   </table>
-
-
-  
-  <h3>Machine Learning for Predictive Data Analytics - Notes and Worked Examples</h3>
+  <br/>
+  <h2>Machine Learning for Predictive Data Analytics - Notes and Worked Examples</h2>
   <p>By John D Kelleher, Brian Mac Namee, and Aoife D'Arcy <a href="https://machinelearningbook.com/teaching-materials/">(link to the offical website)</a></p>
   <br/>
    <table>
       <tr>
-          <td><a href='notes/FMLPDA_chapter_four_information_based_learning_notes.html'>Chapter Four Information Based Learning Notes</a></td>
+          <td><a href='notes/html_output/FMLPDA_chapter_four_information_based_learning_notes.html'>Chapter Four Information Based Learning Notes</a></td>
           <td>Notes on decision trees and information based learning.</td>
       </tr>
   </table>
-
 
 </div>
