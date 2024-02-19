@@ -1,136 +1,139 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <style>
+  <style>
+    body {
+      background-color: #fafafcde;
+      color: rgb(56, 56, 56);
+      letter-spacing: .030rem;
+      font-family: Arial, Helvetica, "Trebuchet MS", Verdana, sans-serif;
+      margin:0px;
+    }
+    h1,
+    h2,
+    h3 {
+      color: rgb(37, 37, 37);
+      margin: 0px;
+    }
+     .side_menu ul{
+      list-style-type: none;
+      padding-left: 5px;
+    }
+    .side_menu li{
+      height: 30px;
+      border-bottom: 1px solid rgb(104, 104, 104);
+      padding-top: 10px;
+      padding-left: 10px;
+      font-size: 16px;
+      color: white;
+      background-color: rgb(53, 53, 53);
+    }
+    .side_menu li:hover{
+      background-color: rgb(104, 104, 104);
+      color: white;
+      font-weight: 700;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    table,
+    tr,
+    td {
+      border: 0px solid rgb(229, 229, 230);
+    }
+    a{
+      color: rgb(39, 87, 117)
+    }
+    td {
+      width: 400px;
+      padding: 4px;
+      font-size: 16px;
+      padding: 5px;
+    }
+    td:hover {
+      background-color: rgb(66, 66, 66);
+      color: white;
+      font-weight: bold;
+    }
+    td:hover a{
+        color: white;
+    }
+    table td:nth-child(1) {
+      width: 250px;
+      padding: 10px;
+    }
+    table td:nth-child(2) {
+      width: 400px;
+    }
+    #main-content-div {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .container{
+        display: flex; /* Enable flexbox */
+        height: 100vh; /* Full height of the viewport */
+    }
+    .side_menu{
+        flex: 1; /* Takes up 1 part of the available space */
+        background-color: rgb(105, 105, 105); /* Just for demonstration */
+        padding-left: 20px;
+        border-right: 2px solid rgb(53, 53, 53);
+    }
+    .side_menu h2{
+      color: white;
+      padding-top: 10px;
+    }
+    .main_content{
+        flex: 6; /* Takes up 2 parts of the available space, making it larger than div1 */
+        background-color: rgb(255, 255, 255); /* Just for demonstration */
+    }
+    #banner{
+      width:100%;
+      height: 70px;
+      background-color: white;
+      border-bottom: 2px solid  rgb(53, 53, 53);
+      color: black;
+      padding: 20px;
+    }
 
-        body {
-          background-color:	 #111113de;
-          color: white;
-          letter-spacing: .045rem;
-          font-family: Arial, Helvetica, "Trebuchet MS", Verdana, sans-serif;
-        }
-        
-        h1,h2,h3 {
-          color:aliceblue;
-          
-        }
-        
-
-        table{
-          border-collapse: collapse;
-        }
-
-        table,tr,td{
-          border: 1px solid rgb(119, 106, 106);
-        }
-
-        a:link {
-          color: lightcyan
-        }
-
-        a:visited {
-          color:lightskyblue
-        }
-
-        td{
-          width: 400px;
-          padding: 4px;
-          font-size: 18px;
-          color:burlywood;
-          padding:15px;
-        }
-
-        table td:nth-child(2){
-          width: 600px;
-        }
-
-        #main-content-div{
-          margin-left: 10px;
-          margin-right: 10px;
-        }
-    </style>
+</style>
 </head>
 <body>
-
-<H1>Korey M. Stafford</H1>
-<p>A series of Jupyter notebooks, as well as some helpful scripts that I refer back to occasionally.</p>
-<hr/>
-
-<div id='main-content-div'>
-
-  <br/>
-
-  <h2>S&P 500 - Alphavantage / Yahoo Finance</h2>
-   <table>
-    <tr>
-      <td><a href='sp500_analysis/html_output/decision_trees_value_stocks.html'>Using Decision Trees to Identify Value Stocks</a></td>
-      <td>Using Alphavantage and SKLearn can I train a decision tree to correctly classified value stocks as selected by Warren Buffet. More work required.</td>
-    </tr>
-      <tr>
-          <td><a href='sp500_analysis/html_output/income_statement_analysis.html'>S&P 500 Income Statement Analysis</a></td>
-          <td>Look at income statement data for S&P 500 stocks using alphavantage api.</td>
-      </tr>
-      <tr>
-        <td><a href='sp500_analysis/html_output/sp500_change_analysis.html'>S&P 500 Change Analysis</a></td>
-        <td>Look at correlations between balance sheets and company stock performance over time.</td>
-    </tr>
-    <tr>
-      <td><a href='sp500_analysis/html_output/sp500_company_overview_analysis.html'>S&P 500 Company Overview Analysis</a></td>
-      <td>Exploratory analysis of various features avaiable in Alphavantages company overview analysis.</td>
-  </tr>
-  </table>
-  <br/>
-  <h2>General Python</h2>
-  <table>
-    <tr>
-      <td><a href='general_python/html_output/sets.html'>Sets</a></td>
-      <td>A quick reference guide on sets in Python.</td>
-  </tr>
-      <tr>
-          <td><a href='general_python/html_output/python_warnings.html'>Warnings in Python</a></td>
-          <td>A quick reference guide on throwing warnings in Python.</td>
-      </tr>
-      <tr>
-        <td><a href='general_python/html_output/python_class_basics.html'>Python Class Basics</a></td>
-        <td>An introductory review of classes in Python.</td>
-    </tr>
-    <tr>
-      <td><a href='general_python/html_output/precedence_associativity.html'>Precedence and Associativity</a></td>
-      <td>The order in which Python expressions are executed.</td>
-  </tr>
-  <tr>
-    <td><a href='general_python/html_output/operators.html'>Operators</a></td>
-    <td>Examples of various operators in Python.</td>
-</tr>
-    <tr>
-      <td><a href='general_python/html_output/advanced_python.html'>Advanced Python</a></td>
-      <td>An introductory review of classes in Python.</td>
-  </tr>
-  </table>
-  <br/>
-  <h2>General Statistics</h2>
-   <table>
-      <tr>
-          <td><a href='stats/html_output/student_t_test.html'>Student's t-test</a></td>
-          <td>Hypothesis testing technique used to test the mean between two samples, and whether the difference between those two means could have happened by chance. 
-            Should be used where the population is expected to be normally distributed and where the population standard deviation is not known. 
-            It is also intended to work on smaller sample sizes. For more than two samples use ANOVA.</td>
-      </tr>
-      <tr>
-        <td><a href='stats/html_output/ANOVA.html'>Analysis of Variance (ANOVA)</a></td>
-        <td>Hypothesis testing technique used to test whether there is a difference between more than two samples. Similar to the Student’s t-test a statistic called the f-statistic is computed and compared against a critical value of that statistic to determine whether a difference exists and how likely the difference has occurred by chance. 
-        </td>
-    </tr>
-  </table>
-  <br/>
-  <h2>Machine Learning for Predictive Data Analytics - Notes and Worked Examples</h2>
-  <p>By John D Kelleher, Brian Mac Namee, and Aoife D'Arcy <a href="https://machinelearningbook.com/teaching-materials/">(link to the offical website)</a></p>
-  <br/>
-   <table>
-      <tr>
-          <td><a href='notes/html_output/FMLPDA_chapter_four_information_based_learning_notes.html'>Chapter Four Information Based Learning Notes</a></td>
-          <td>Notes on decision trees and information based learning.</td>
-      </tr>
-  </table>
-
+  <div id="banner">
+  <h1>Korey M. Stafford</h1>
+  <p>A series of Jupyter notebooks, as well as some helpful scripts that I refer back to occasionally.</p>
 </div>
+
+  <div class="container">
+    <div class="side_menu">
+        <h2>General Python</h2>
+        <ul>
+        <li ref="general_python/html_output/sets.html" onclick="return loadIframe(this.getAttribute('ref'));">Sets</li>
+        <li ref="general_python/html_output/python_warnings.html" onclick="return loadIframe(this.getAttribute('ref'));">Warnings in Python</li>
+        <li ref="general_python/html_output/python_class_basics.html" onclick="return loadIframe(this.getAttribute('ref'));">Python Class Basics</li>
+        <li ref="general_python/html_output/precedence_associativity.html" onclick="return loadIframe(this.getAttribute('ref'));">Precedence and Associativity</li>
+        <li ref="general_python/html_output/operators.html" onclick="return loadIframe(this.getAttribute('ref'));">Operators</li>
+        <li ref="general_python/html_output/advanced_python.html" onclick="return loadIframe(this.getAttribute('ref'));">Advanced Python</li>
+      </ul>
+    </div>
+    <div class="main_content">
+        
+    <iframe id="myIframe" width="100%" height="100%" style="border:none;"></iframe>
+
+    </div>
+  </div>
+
+  </div>
+  <div id='main-content-div'>
+    <br />
+  </div>
+  <div><script type='text/javascript' src='https://mydashboard.industrysoftware.automation.siemens.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 2512px; height: 1272px;'><object class='tableauViz' width='2512' height='1272' style='display:none;'><param name='host_url' value='https%3A%2F%2Fmydashboard.industrysoftware.automation.siemens.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CompetitorFinancialsDashboard-PRODUCTION-EXEC-Qtrs&#47;EBITDAvs_EBITDARev' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object></div></div>
+  <script>
+     function loadIframe(url) {
+            console.log(url)
+            document.getElementById('myIframe').src = url;
+            // Prevent the default action of the anchor tag
+            return false;
+        }
+</script>
