@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       background-color: #fafafcde;
@@ -89,21 +90,40 @@
         background-color: rgb(255, 255, 255); /* Just for demonstration */
     }
     #banner{
-      width:100%;
-      height: 70px;
+      width: 100%;
+      height: 110px;
       background-color: white;
-      border-bottom: 2px solid  rgb(53, 53, 53);
+      border-bottom: 2px solid rgb(53, 53, 53);
       color: black;
       padding: 20px;
+      display: flex; /* Use flexbox for layout */
+      justify-content: space-between; /* Space out the items */
+      align-items: center; /* Center items vertically */
+      box-sizing: border-box; /* Ensure padding does not affect width */
     }
-
+    #banner-links {
+      height: 20px;
+      display: flex; /* Use flexbox for alignment */
+      align-items: center; /* Center items vertically */
+    }
+    #banner-links a {
+      text-decoration: none;
+      color: black;
+      font-size: 24px;
+    }
 </style>
 </head>
 <body>
   <div id="banner">
-  <h1>Korey M. Stafford</h1>
-  <p>A series of Jupyter notebooks, as well as some helpful scripts that I refer back to occasionally.</p>
-</div>
+    <div id="banner-header"> <h1>Korey M. Stafford</h1>
+      <p>A series of Jupyter notebooks, as well as some helpful scripts that I refer back to occasionally.</p>
+    </div>
+    <div id="banner-links"> 
+      <a href="https://www.linkedin.com/in/korey-stafford-a3b2a3119/" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
 
   <div class="container">
     <div class="side_menu">
@@ -116,7 +136,18 @@
         <li ref="general_python/html_output/operators.html" onclick="return loadIframe(this.getAttribute('ref'));">Operators</li>
         <li ref="general_python/html_output/advanced_python.html" onclick="return loadIframe(this.getAttribute('ref'));">Advanced Python</li>
         <li ref="general_python/html_output/classmethod_and_dataclasses.html" onclick="return loadIframe(this.getAttribute('ref'));">Classmethod and Dataclasses</li>
+        <li ref="general_python/html_output/packages_in_python.html" onclick="return loadIframe(this.getAttribute('ref'));">Packages in Python</li>
       </ul>
+      <h2>LangChain</h2>
+        <ul>
+          <li ref="Langchain/langchain_basics.html" onclick="return loadIframe(this.getAttribute('ref'));">LangChain Basics</li>
+          <li ref="Langchain/structured_tools.html" onclick="return loadIframe(this.getAttribute('ref'));">Structured Tools</li>
+          <li ref="Langchain/multiprompt_template.html" onclick="return loadIframe(this.getAttribute('ref'));">Multi-Prompt Router Chains</li>
+        </ul>
+      <h2>Machine Learning</h2>
+        <ul>
+          <li ref="machine_learning/logistic_regression.html" onclick="return loadIframe(this.getAttribute('ref'));">Logistic Regression</li>
+        </ul>
     </div>
     <div class="main_content">
         
