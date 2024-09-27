@@ -22,12 +22,12 @@
       padding-left: 5px;
     }
     .side_menu li{
-      height: 25px;
+      height: 35px;
       border-bottom: 1px solid rgb(104, 104, 104);
-      padding-top: 10px;
+      padding-top: 4px;
       padding-left: 10px;
-      font-size: 14px;
-      color: rgb(153, 153, 153);
+      font-size: 12px;
+      color: rgb(214, 214, 214);
       background-color: rgb(53, 53, 53);
     }
     .side_menu li:hover{
@@ -76,9 +76,9 @@
         height: 100vh; /* Full height of the viewport */
     }
     .side_menu{
-        flex: 1; /* Takes up 1 part of the available space */
+        flex: 1.05; /* Takes up 1 part of the available space */
         background-color: rgb(105, 105, 105); /* Just for demonstration */
-        padding-left: 20px;
+        padding-left: 3px;
         border-right: 2px solid rgb(53, 53, 53);
     }
     .side_menu h2{
@@ -93,14 +93,17 @@
     #banner{
       width: 100%;
       height: 100px;
-      background-color: rgb(192, 192, 192);
+      background-color: rgb(21, 21, 21);
       border-bottom: 2px solid rgb(53, 53, 53);
-      color: black;
-      padding: 10px 10px 10px 30px;
+      color: rgb(186, 186, 186);
+      padding: 10px 10px 10px 12px;
       display: flex; /* Use flexbox for layout */
       justify-content: space-between; /* Space out the items */
       align-items: center; /* Center items vertically */
       box-sizing: border-box; /* Ensure padding does not affect width */
+    }
+    #banner h1{
+      color: rgb(234, 234, 234);
     }
     #banner p{
       margin:1.25px
@@ -133,20 +136,22 @@
     <div class="side_menu">
         <h2>General Python</h2>
         <ul>
+        <li ref="general_python/html_output/iterables.html" onclick="return loadIframe(this.getAttribute('ref'));">Iterables</li>
+        <li ref="general_python/html_output/abcs.html" onclick="return loadIframe(this.getAttribute('ref'));">ABCs</li>
         <li ref="general_python/html_output/sets.html" onclick="return loadIframe(this.getAttribute('ref'));">Sets</li>
         <li ref="general_python/html_output/python_warnings.html" onclick="return loadIframe(this.getAttribute('ref'));">Warnings in Python</li>
         <li ref="general_python/html_output/python_class_basics.html" onclick="return loadIframe(this.getAttribute('ref'));">Python Class Basics</li>
-        <li ref="general_python/html_output/precedence_associativity.html" onclick="return loadIframe(this.getAttribute('ref'));">Precedence and Associativity</li>
+        <li ref="general_python/html_output/precedence_associativity.html" onclick="return loadIframe(this.getAttribute('ref'));">Precedence & Associativity</li>
         <li ref="general_python/html_output/operators.html" onclick="return loadIframe(this.getAttribute('ref'));">Operators</li>
         <li ref="general_python/html_output/advanced_python.html" onclick="return loadIframe(this.getAttribute('ref'));">Advanced Python</li>
-        <li ref="general_python/html_output/classmethod_and_dataclasses.html" onclick="return loadIframe(this.getAttribute('ref'));">Classmethod and Dataclasses</li>
-        <li ref="general_python/html_output/packages_in_python.html" onclick="return loadIframe(this.getAttribute('ref'));">Packages in Python</li>
+        <li ref="general_python/html_output/classmethod_and_dataclasses.html" onclick="return loadIframe(this.getAttribute('ref'));">Classmethod & Dataclasses</li>
+        <li ref="general_python/html_output/packages_in_python.html" onclick="return loadIframe(this.getAttribute('ref'));">Packages</li>
       </ul>
       <h2>LangChain</h2>
         <ul>
           <li ref="langchain/langchain_basics.html" onclick="return loadIframe(this.getAttribute('ref'));">LangChain Basics</li>
           <li ref="langchain/structured_tools.html" onclick="return loadIframe(this.getAttribute('ref'));">Structured Tools</li>
-          <li ref="langchain/multiprompt_template.html" onclick="return loadIframe(this.getAttribute('ref'));">Multi-Prompt Router Chains</li>
+          <li ref="langchain/multiprompt_template.html" onclick="return loadIframe(this.getAttribute('ref'));">Multi-Prompt Routers</li>
         </ul>
       <h2>Machine Learning</h2>
         <ul>
