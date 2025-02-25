@@ -1,64 +1,73 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>Korey M. Stafford</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       background-color: #fafafcde;
       color: rgb(56, 56, 56);
-      letter-spacing: .030rem;
+      letter-spacing: 0.03rem;
       font-family: Arial, Helvetica, "Trebuchet MS", Verdana, sans-serif;
-      margin:0px;
+      margin: 0;
     }
-    h1,
-    h2,
-    h3 {
+    h1, h2, h3 {
       color: rgb(37, 37, 37);
-      margin: 0px;
+      margin: 0;
     }
-     .side_menu ul{
+    .side_menu ul {
       list-style-type: none;
       padding-left: 5px;
+      margin: 0px 5px 5px 5px;
     }
-    .side_menu li{
-      height: 35px;
-      border-bottom: 1px solid rgb(104, 104, 104);
-      padding-top: 4px;
-      padding-left: 10px;
-      font-size: 12px;
+    .side_menu li {
+      /* height: 35px; */
+      /* border-bottom: 1px solid rgb(104, 104, 104); */
+      padding: 4px 10px;
+      font-size: 14px;
+      font-weight: 700;
       color: rgb(214, 214, 214);
       background-color: rgb(53, 53, 53);
+      cursor: pointer;
     }
-    .side_menu li:hover{
+    .side_menu ul li ul li {
+        /* border: 1px solid rgb(104, 104, 104); */
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .side_menu li:hover {
       background-color: rgb(104, 104, 104);
       color: white;
       font-weight: 700;
     }
+    /* Optional styling for nested lists */
+    .side_menu ul ul {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
     table {
       border-collapse: collapse;
     }
-    table,
-    tr,
-    td {
+    table, tr, td {
       border: 0px solid rgb(229, 229, 230);
     }
-    a{
-      color: rgb(39, 87, 117)
+    a {
+      color: rgb(39, 87, 117);
+      text-decoration: none;
     }
     td {
       width: 400px;
-      padding: 4px;
-      font-size: 16px;
       padding: 5px;
+      font-size: 16px;
     }
     td:hover {
       background-color: rgb(66, 66, 66);
       color: white;
       font-weight: bold;
     }
-    td:hover a{
-        color: white;
+    td:hover a {
+      color: white;
     }
     table td:nth-child(1) {
       width: 250px;
@@ -68,115 +77,150 @@
       width: 400px;
     }
     #main-content-div {
-      margin-left: 10px;
-      margin-right: 10px;
+      margin: 10px;
     }
-    .container{
-        display: flex; /* Enable flexbox */
-        height: 100vh; /* Full height of the viewport */
+    .container {
+      display: flex;
+      height: 100vh;
     }
-    .side_menu{
-        flex: 1.05; /* Takes up 1 part of the available space */
-        background-color: rgb(0, 0, 0); /* Just for demonstration */
-        padding-left: 5px;
-        border-right: 2px solid rgb(0, 0, 0);
+    .side_menu {
+      flex: 1.05;
+      background-color: rgb(0, 0, 0);
+      padding-left: 5px;
+      border-right: 2px solid rgb(0, 0, 0);
+      overflow-y: auto;
     }
-    .side_menu h2{
+    .side_menu h2 {
       color: rgb(231, 231, 231);
-      padding-top: 10px;
-      font-size: 18px;
+      padding: 10px 10px 0 10px;
+      font-size: 20px;
+      margin: 0px 0px 10px 0px;
     }
-    .main_content{
-        flex: 6; /* Takes up 2 parts of the available space, making it larger than div1 */
-        background-color: rgb(255, 255, 255); /* Just for demonstration */
+    .main_content {
+      flex: 6;
+      background-color: rgb(255, 255, 255);
+      overflow: hidden;
     }
-    #banner{
+    #banner {
       width: 100%;
       height: 100px;
       background-color: rgb(21, 21, 21);
       border-bottom: 2px solid rgb(53, 53, 53);
       color: rgb(186, 186, 186);
-      padding: 10px 10px 10px 12px;
-      display: flex; /* Use flexbox for layout */
-      justify-content: space-between; /* Space out the items */
-      align-items: center; /* Center items vertically */
-      box-sizing: border-box; /* Ensure padding does not affect width */
+      padding: 10px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
     }
-    #banner h1{
+    #banner h1 {
       color: rgb(234, 234, 234);
     }
-    #banner p{
-      margin:1.25px
+    #banner p {
+      margin: 1.25px 0 0 0;
     }
     #banner-links {
-      height: 20px;
-      display: flex; /* Use flexbox for alignment */
-      align-items: center; /* Center items vertically */
+      display: flex;
+      align-items: center;
     }
     #banner-links a {
-      text-decoration: none;
-      color: rgb(255, 250, 250);
       font-size: 36px;
+      color: rgb(255, 250, 250);
+      margin-left: 10px;
     }
-</style>
+  </style>
 </head>
 <body>
   <div id="banner">
-    <div id="banner-header"> <h1>Korey M. Stafford</h1>
+    <div id="banner-header">
+      <h1>Korey M. Stafford</h1>
       <p>A series of Jupyter notebooks and some helpful scripts that I occasionally refer back to.</p>
     </div>
-    <div id="banner-links"> 
+    <div id="banner-links">
       <a href="https://www.linkedin.com/in/korey-stafford-a3b2a3119/" target="_blank">
         <i class="fab fa-linkedin"></i>
       </a>
     </div>
   </div>
-
   <div class="container">
     <div class="side_menu">
-        <h2>General Python</h2>
-        <ul>
-        <li ref="general_python/html_output/iterables.html" onclick="return loadIframe(this.getAttribute('ref'));">Iterables</li>
-        <li ref="general_python/html_output/abcs.html" onclick="return loadIframe(this.getAttribute('ref'));">ABCs</li>
-        <li ref="general_python/html_output/sets.html" onclick="return loadIframe(this.getAttribute('ref'));">Sets</li>
-        <li ref="general_python/html_output/python_warnings.html" onclick="return loadIframe(this.getAttribute('ref'));">Warnings</li>
-        <li ref="general_python/html_output/python_class_basics.html" onclick="return loadIframe(this.getAttribute('ref'));">Class Basics</li>
-        <li ref="general_python/html_output/precedence_associativity.html" onclick="return loadIframe(this.getAttribute('ref'));">Precedence & Associativity</li>
-        <li ref="general_python/html_output/operators.html" onclick="return loadIframe(this.getAttribute('ref'));">Operators</li>
-        <li ref="general_python/html_output/advanced_python.html" onclick="return loadIframe(this.getAttribute('ref'));">Advanced</li>
-        <li ref="general_python/html_output/classmethod_and_dataclasses.html" onclick="return loadIframe(this.getAttribute('ref'));">Classmethod & Dataclasses</li>
-        <li ref="general_python/html_output/packages_in_python.html" onclick="return loadIframe(this.getAttribute('ref'));">Packages</li>
+    <h2>Python</h2>
+      <ul>
+        <li>
+          <ul>
+            <li data-url="general_python/html_output/python_mindmap.html" onclick="return loadIframe(this.getAttribute('data-url'));">Python Topic Overview</li>
+          </ul>
+        </li>
+        <li>
+      
+ 
+        <li>
+          Advanced
+          <ul>
+            <li data-url="general_python/html_output/iterables.html" onclick="return loadIframe(this.getAttribute('data-url'));">Iterables</li>
+            <li data-url="general_python/html_output/closures_and_decorators.html" onclick="return loadIframe(this.getAttribute('data-url'));">Closures and Decorators</li>
+            <li data-url="general_python/html_output/asynch.html" onclick="return loadIframe(this.getAttribute('data-url'));">Asynch</li>
+        </ul>
+        </li>
+        <li>
+          OOP
+          <ul>
+            <li data-url="general_python/html_output/abcs.html" onclick="return loadIframe(this.getAttribute('data-url'));">ABCs</li>
+            <li data-url="general_python/html_output/python_class_basics.html" onclick="return loadIframe(this.getAttribute('data-url'));">Class Basics</li>
+            <li data-url="general_python/html_output/classmethod_and_dataclasses.html" onclick="return loadIframe(this.getAttribute('data-url'));">Classmethod & Dataclasses</li>
+          </ul>
+        </li>
+        <li>
+          Basics
+          <ul>
+            <li data-url="general_python/html_output/python_warnings.html" onclick="return loadIframe(this.getAttribute('data-url'));">Python Warnings</li>
+          </ul>
+        </li>
+        <li>
+          Basics
+          <ul>
+            <li data-url="general_python/html_output/precedence_associativity.html" onclick="return loadIframe(this.getAttribute('data-url'));">Precedence & Associativity</li>
+            <li data-url="general_python/html_output/operators.html" onclick="return loadIframe(this.getAttribute('data-url'));">Operators</li>
+          </ul>
+        </li>
+        <li>
+          Data Structures - Basics
+          <ul>
+            <li data-url="general_python/html_output/sets.html" onclick="return loadIframe(this.getAttribute('data-url'));">Sets</li>
+          </ul>
+        </li>
+        <li>
+          Environments and Packaging
+          <ul>
+            <li data-url="general_python/html_output/packages_in_python.html" onclick="return loadIframe(this.getAttribute('data-url'));">Packages</li>
+          </ul>
+        </li>
       </ul>
+  
       <h2>LangChain</h2>
-        <ul>
-          <li ref="langchain/langchain_basics.html" onclick="return loadIframe(this.getAttribute('ref'));">Basics</li>
-          <li ref="langchain/structured_tools.html" onclick="return loadIframe(this.getAttribute('ref'));">Structured Tools</li>
-          <li ref="langchain/multiprompt_template.html" onclick="return loadIframe(this.getAttribute('ref'));">Multi-Prompt Routers</li>
-        </ul>
+      <ul>
+        <li data-url="langchain/langchain_basics.html" onclick="return loadIframe(this.getAttribute('data-url'));">Basics</li>
+        <li data-url="langchain/structured_tools.html" onclick="return loadIframe(this.getAttribute('data-url'));">Structured Tools</li>
+        <li data-url="langchain/multiprompt_template.html" onclick="return loadIframe(this.getAttribute('data-url'));">Multi-Prompt Routers</li>
+      </ul>
+  
       <h2>Machine Learning</h2>
-        <ul>
-          <li ref="machine_learning/clustering_word_ev_explore.html" onclick="return loadIframe(this.getAttribute('ref'));">Term Clustering</li>
-          <li ref="machine_learning/logistic_regression.html" onclick="return loadIframe(this.getAttribute('ref'));">Logistic Regression</li>
-          <li ref="machine_learning/HDBSCAN.html" onclick="return loadIframe(this.getAttribute('ref'));">Clustering with HDBSCAN</li>
-          
-        </ul>
+      <ul>
+        <li data-url="machine_learning/clustering_word_ev_explore.html" onclick="return loadIframe(this.getAttribute('data-url'));">Term Clustering</li>
+        <li data-url="machine_learning/logistic_regression.html" onclick="return loadIframe(this.getAttribute('data-url'));">Logistic Regression</li>
+        <li data-url="machine_learning/HDBSCAN.html" onclick="return loadIframe(this.getAttribute('data-url'));">Clustering with HDBSCAN</li>
+      </ul>
     </div>
     <div class="main_content">
-        
-    <iframe id="myIframe" width="100%" height="100%" style="border:none;"></iframe>
-
+      <iframe id="myIframe" width="100%" height="100%" style="border:none;"></iframe>
     </div>
   </div>
-
-  </div>
-  <div id='main-content-div'>
-    <br />
-  </div>
   <script>
-     function loadIframe(url) {
-            console.log(url)
-            document.getElementById('myIframe').src = url;
-            // Prevent the default action of the anchor tag
-            return false;
-        }
-</script>
+    function loadIframe(url) {
+      console.log("Loading:", url);
+      document.getElementById('myIframe').src = url;
+      return false;
+    }
+  </script>
+</body>
+</html>
