@@ -20,12 +20,14 @@
       list-style-type: none;
       padding-left: 5px;
       margin: 0px 5px 5px 5px;
+      border-radius: 1px;
+      border: 1px solid black;
     }
     .side_menu li {
       /* height: 35px; */
       /* border-bottom: 1px solid rgb(104, 104, 104); */
-      padding: 4px 10px;
-      font-size: 14px;
+      padding: 7px 12px;
+      font-size: 16px;
       font-weight: 700;
       color: rgb(214, 214, 214);
       background-color: rgb(53, 53, 53);
@@ -33,7 +35,7 @@
     }
     .side_menu ul li ul li {
         /* border: 1px solid rgb(104, 104, 104); */
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 400;
     }
     .side_menu li:hover {
@@ -84,7 +86,7 @@
       height: 100vh;
     }
     .side_menu {
-      flex: 1.05;
+      flex: 1.5;
       background-color: rgb(0, 0, 0);
       padding-left: 5px;
       border-right: 2px solid rgb(0, 0, 0);
@@ -144,22 +146,16 @@
   </div>
   <div class="container">
     <div class="side_menu">
-    <h2>Python</h2>
-      <ul>
+    <h2>Python</h2>     
+       <ul>
+        <li data-url="general_python/html_output/python_mindmap.html" onclick="return loadIframe(this.getAttribute('data-url'));">Python Topic Overview</li>
         <li>
-          <ul>
-            <li data-url="general_python/html_output/python_mindmap.html" onclick="return loadIframe(this.getAttribute('data-url'));">Python Topic Overview</li>
-          </ul>
-        </li>
-        <li>
-      
- 
-        <li>
-          Advanced
+          <h3>Advanced</h3>
           <ul>
             <li data-url="general_python/html_output/iterables.html" onclick="return loadIframe(this.getAttribute('data-url'));">Iterables</li>
             <li data-url="general_python/html_output/closures_and_decorators.html" onclick="return loadIframe(this.getAttribute('data-url'));">Closures and Decorators</li>
-            <li data-url="general_python/html_output/asynch.html" onclick="return loadIframe(this.getAttribute('data-url'));">Asynch</li>
+            <li data-url="general_python/html_output/asynch.html" onclick="return loadIframe(this.getAttribute('data-url'));">Async</li>
+            <li data-url="general_python/html_output/lambdas.html" onclick="return loadIframe(this.getAttribute('data-url'));">Lambdas</li>
         </ul>
         </li>
         <li>
@@ -168,12 +164,7 @@
             <li data-url="general_python/html_output/abcs.html" onclick="return loadIframe(this.getAttribute('data-url'));">ABCs</li>
             <li data-url="general_python/html_output/python_class_basics.html" onclick="return loadIframe(this.getAttribute('data-url'));">Class Basics</li>
             <li data-url="general_python/html_output/classmethod_and_dataclasses.html" onclick="return loadIframe(this.getAttribute('data-url'));">Classmethod & Dataclasses</li>
-          </ul>
-        </li>
-        <li>
-          Basics
-          <ul>
-            <li data-url="general_python/html_output/python_warnings.html" onclick="return loadIframe(this.getAttribute('data-url'));">Python Warnings</li>
+            <li data-url="general_python/html_output/mixins.html" onclick="return loadIframe(this.getAttribute('data-url'));">Mixins</li>
           </ul>
         </li>
         <li>
@@ -181,6 +172,7 @@
           <ul>
             <li data-url="general_python/html_output/precedence_associativity.html" onclick="return loadIframe(this.getAttribute('data-url'));">Precedence & Associativity</li>
             <li data-url="general_python/html_output/operators.html" onclick="return loadIframe(this.getAttribute('data-url'));">Operators</li>
+            <li data-url="general_python/html_output/python_warnings.html" onclick="return loadIframe(this.getAttribute('data-url'));">Python Warnings</li>
           </ul>
         </li>
         <li>
@@ -193,6 +185,12 @@
           Environments and Packaging
           <ul>
             <li data-url="general_python/html_output/packages_in_python.html" onclick="return loadIframe(this.getAttribute('data-url'));">Packages</li>
+          </ul>
+        </li>
+        <li>
+          Packages
+          <ul>
+            <li data-url="general_python/html_output/pydantic.html" onclick="return loadIframe(this.getAttribute('data-url'));">Pydantic</li>
           </ul>
         </li>
       </ul>
