@@ -16,12 +16,17 @@
       color: rgb(37, 37, 37);
       margin: 0;
     }
+    .side_menu h3 {
+      font-size: 14px;
+      color: white;
+      text-decoration: none !important;
+    }
     .side_menu ul {
       list-style-type: none;
       padding-left: 5px;
       margin: 0px 5px 5px 5px;
       border-radius: 1px;
-      border: 1px solid black;
+      /* border: 1px solid black; */
     }
     .side_menu li {
       /* height: 35px; */
@@ -29,7 +34,7 @@
       padding: 7px 12px;
       font-size: 16px;
       font-weight: 700;
-      color: rgb(214, 214, 214);
+      color: rgb(204, 212, 127);
       background-color: rgb(53, 53, 53);
       cursor: pointer;
     }
@@ -86,7 +91,7 @@
       height: 100vh;
     }
     .side_menu {
-      flex: 1.5;
+      flex: 1.10;
       background-color: rgb(0, 0, 0);
       padding-left: 5px;
       border-right: 2px solid rgb(0, 0, 0);
@@ -139,6 +144,9 @@
       <p>A series of Jupyter notebooks and some helpful scripts that I occasionally refer back to.</p>
     </div>
     <div id="banner-links">
+      <a href="https://github.com/PDXKor" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
       <a href="https://www.linkedin.com/in/korey-stafford-a3b2a3119/" target="_blank">
         <i class="fab fa-linkedin"></i>
       </a>
@@ -156,10 +164,11 @@
             <li data-url="general_python/html_output/closures_and_decorators.html" onclick="return loadIframe(this.getAttribute('data-url'));">Closures and Decorators</li>
             <li data-url="general_python/html_output/asynch.html" onclick="return loadIframe(this.getAttribute('data-url'));">Async</li>
             <li data-url="general_python/html_output/lambdas.html" onclick="return loadIframe(this.getAttribute('data-url'));">Lambdas</li>
+            <li data-url="general_python/html_output/logging.html" onclick="return loadIframe(this.getAttribute('data-url'));">Logging</li>
         </ul>
         </li>
         <li>
-          OOP
+          <h3>OOP</h3>
           <ul>
             <li data-url="general_python/html_output/abcs.html" onclick="return loadIframe(this.getAttribute('data-url'));">ABCs</li>
             <li data-url="general_python/html_output/python_class_basics.html" onclick="return loadIframe(this.getAttribute('data-url'));">Class Basics</li>
@@ -168,7 +177,7 @@
           </ul>
         </li>
         <li>
-          Basics
+          <h3>Basics</h3>
           <ul>
             <li data-url="general_python/html_output/precedence_associativity.html" onclick="return loadIframe(this.getAttribute('data-url'));">Precedence & Associativity</li>
             <li data-url="general_python/html_output/operators.html" onclick="return loadIframe(this.getAttribute('data-url'));">Operators</li>
@@ -176,19 +185,19 @@
           </ul>
         </li>
         <li>
-          Data Structures - Basics
+          <h3>Data Structures - Basics</h3>
           <ul>
             <li data-url="general_python/html_output/sets.html" onclick="return loadIframe(this.getAttribute('data-url'));">Sets</li>
           </ul>
         </li>
         <li>
-          Environments and Packaging
+          <h3>Environments and Packaging</h3>
           <ul>
             <li data-url="general_python/html_output/packages_in_python.html" onclick="return loadIframe(this.getAttribute('data-url'));">Packages</li>
           </ul>
         </li>
         <li>
-          Packages
+          <h3>Packages</h3>
           <ul>
             <li data-url="general_python/html_output/pydantic.html" onclick="return loadIframe(this.getAttribute('data-url'));">Pydantic</li>
           </ul>

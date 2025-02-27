@@ -1,0 +1,21 @@
+2025-02-27 08:10:32,573 [INFO] __main__: This is an info message
+2025-02-27 08:10:32,574 [ERROR] __main__: An error occurred while dividing by zero
+Traceback (most recent call last):
+  File "C:\Users\z004p3ny\AppData\Local\Temp\ipykernel_12976\645324756.py", line 43, in main
+    result = 1 / 0
+             ~~^~~
+ZeroDivisionError: division by zero
+2025-02-27 08:14:02,034 [INFO] __main__: Info log message.
+2025-02-27 08:14:02,037 [WARNING] __main__: This is a warning!
+2025-02-27 08:14:02,040 [ERROR] __main__: This is an error!
+2025-02-27 08:14:02,042 [CRITICAL] __main__: This is a critical message
+2025-02-27 08:31:15,100 - __main__ - WARNING - Warning log message.
+2025-02-27 08:32:53,252 - __main__ - WARNING - Warning log message.
+2025-02-27 08:32:53,252 - __main__ - WARNING - Warning log message.
+2025-02-27 08:32:57,850 - __main__ - WARNING - Warning log message.
+2025-02-27 08:32:57,850 - __main__ - WARNING - Warning log message.
+2025-02-27 08:32:57,850 - __main__ - WARNING - Warning log message.
+2025-02-27 15:20:50,633 - __main__ - WARNING - Warning log message.
+2025-02-27 15:20:50,633 - __main__ - WARNING - Warning log message.
+2025-02-27 15:20:50,633 - __main__ - WARNING - Warning log message.
+2025-02-27 15:20:50,633 - __main__ - WARNING - Warning log message.
